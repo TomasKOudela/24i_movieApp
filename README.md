@@ -1,21 +1,21 @@
 ## First
-I couldn't upload node modules to GitHub because the folder would be too big so first run: npm install 
+I couldn't upload node modules to GitHub because the folder would be too big so first run: npm install.
 
 ## Second
 
-After install just run npm start
+After install just run npm start.
 
 ## Home page 
 
-Home page is with four carousels through which you can iterate with click on the arrows on pc
+Home page is with four carousels through which you can iterate with click on the arrows on pc.
 
-And on phone and smaller screens you can just drag,
+And on phone and smaller screens you can just drag.
 
 ## Specific pages to genre
 
 I added pages for popular movies and other genres that are displayed on the home page. 
 
-You can iterate through pages with pagination at the bottom of the page, 
+You can iterate through pages with pagination at the bottom of the page.
 
 ## Search
 
