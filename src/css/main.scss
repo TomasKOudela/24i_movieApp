@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+
+@mixin bigscreen {
+    @media (min-width: 1024px) {
+        @content
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background: #1f1e1e;
+    
+}
+::-webkit-scrollbar{
+        width: 0;
+    }
+
+.container{
+    min-width: 360px;
+    max-width: 1360px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+nav {
+    position: fixed;
+    z-index: 600;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba($color: #1f1e1e, $alpha: 0.75);
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a{
+            text-decoration: none;
+             h1 {
+            font-size: 50px;
+            color: whitesmoke;
+            margin-left: 25px;
+            span{
+                font-weight: 900;
+                color: #009ffd;
+            }
+        }
+        }
+        ul{
+            position: absolute;
+            top: -100vh;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba($color: #1f1e1e, $alpha: 0.95);
+            transition: all 500ms ease-in-out;
+            @include bigscreen{
+                top: 0;
+                height: 100%;
+                width: 80%;
+                flex-direction: row;
+                justify-content: flex-end;
+                background: transparent;
+                position: inherit;
+                margin-right: 10vw;
+            }
+            a{
+                margin: 0 10px;
+                color: whitesmoke;
+                font-size: 40px;
+                font-weight: 900;
+                text-decoration: none;
+                @include bigscreen{
+                    font-size: 20px;
+                }
+
+            }
+        }
+    }
+}
+.hero {
+    position: relative;
+    width: 100%;
+    top: 50px;
+    .container{
+        margin-top: 10vh;
+        h1{
+            font-size: 50px;
+            font-weight: 900;
+            color: whitesmoke;
+            margin: 10px auto;
+            width: 100%;
+            @include bigscreen{
+                font-size: 2em;
+                text-align: inherit;
+                margin: 25px;
+            }
+        }
+        ul{
+            height: 80vh;
+            list-style: none;
+            display: flex;
+            margin-top: 30px;
+            @include bigscreen{
+                align-items: center;
+                height: 25vh;
+            }
+            li{
+                height: 100%;
+                margin: 0 10px;
+                transition: all 1s ease-in-out;
+                img{
+                    height: 100%;
+                    @include bigscreen{
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+.kyJvRZ{
+    display: none;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    @include bigscreen{
+        display: block;
+    }
+}
+.bTybGL{
+    display: none;
+    background-color: transparent !important;
+    box-shadow: none !important;
+     @include bigscreen{
+        display: block;
+    }
+}
+.bkVSTc{
+    display: none !important;
+}
+.detail {
+    position: fixed;
+    display: flex;
+    flex-direction: column-reverse;
+    top: 0;
+    left: 0;
+    background: rgba($color: #242323, $alpha: 0.98);
+    z-index: 800;
+    height: 100vh;
+    width: 100vw;
+    @include bigscreen{
+        flex-direction: row;
+    }
+    .left{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @include bigscreen{
+            width: 50%;
+            height: 100%;
+        }
+        h2{
+            font-size: 35px;
+            font-weight: 900;
+            color: whitesmoke;
+            margin-top: 50px;
+            text-align: center;
+        }
+        p{
+            font-size: 20px;
+            width: 75%;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            color: whitesmoke;
+            font-weight: 500;
+            text-align: center;
+            height: 200px;
+            overflow-y: scroll;
+            @include bigscreen{
+                height: 100px;
+                width: 50%;
+            }
+        }
+        span {
+            width: 75%;
+            height: 2px;
+            margin-bottom: 10px;
+            background: whitesmoke;
+        }
+        button {
+            width: 200px;
+            height: 50px;
+            background: transparent;
+            color: whitesmoke;
+            border: 2px solid whitesmoke;
+            border-radius: 50px;
+            font-size: 35px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            @include bigscreen{
+                margin-top: 50px;
+                margin-right: 50%;
+            }
+        }
+    }
+    .right{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include bigscreen{
+            width: 50%;
+            height: 100%;
+        }
+        img{
+            height: 80%;
+        }
+         button{
+             display: flex;
+             justify-content: center;
+             align-items: center    ;
+       width: 50px;
+       height: 50px;
+       background: transparent;
+       margin: 20px 0 20px 200px;
+       border: none;
+       outline: none;
+       cursor: pointer;
+       @include bigscreen{
+           margin-left: 75%;
+        }
+      
+    }
+     .icon {
+         z-index: 999;
+        width: 80%;
+        height: 80%;
+        color: whitesmoke;
+       }
+      .icon-top-right {
+          position: absolute;
+          top: 0;
+          right: 0;
+          margin: 50px;
+        z-index: 999;
+        width: 50px;
+        height: 50px;
+        color: whitesmoke;
+        border: none;
+      }
+   
+    }
+    .video{
+        position: absolute;
+        z-index: 700   ;
+        width: 100vw;
+        position: absolute;
+        top: 20%;
+
+     
+        @include bigscreen{
+            top: 0;
+            height: 100vh;
+        }
+    }
+}
+.moviesPage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+    img {
+        height: 80vh;
+        margin: 10px;
+        @include bigscreen{
+            height: 50vh;
+        }
+    }
+}
+.pagination{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin: 25px 0;
+    @include bigscreen{
+        width: 80%;
+        margin: 0 auto;
+    }
+    button {
+        background: transparent;
+        border: none;
+        color: whitesmoke;
+        cursor: pointer;
+        margin: 0 20px;
+        height: 100%;
+        width: 30px;
+        svg {
+            height: 100%;
+        }
+    }
+    .lastBtn{
+        height: 100%;
+        width: 20%;
+       
+        display: flex;
+        justify-self: flex-end;
+        justify-content: flex-end;
+        margin: 0;
+        button{
+            margin: 0;
+            cursor: pointer;
+             font-size: 15px;
+        }
+    }
+}
+    .firstbtn{
+        height: 100%;
+        width: 20%;
+        display: flex;
+        margin: 0;
+        button{
+            margin: 0 2px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+    }
+
+.pagination-inner {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pages {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    button{
+        margin: 10px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+}
+
+.inputForm {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 25px;
+    input{
+        width: 300px;
+        height: 35px;
+        background: transparent;
+        color: whitesmoke;
+        border-radius: 50px;
+        border: 2px solid whitesmoke;
+        margin-bottom: 50px;
+        font-size: larger;
+        outline: none;
+    }
+
+}
+.searchContent{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    img{
+        margin: 10px;
+    }
+}
+.menuIcon {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    right: 0;
+    z-index: 999;
+    height: 80px;
+    width: 80px;
+    
+
+    div{
+        width: 80%;
+        height: 10px;
+        background: whitesmoke;
+        border-radius: 10px;
+        &::before {
+        position: absolute;
+        bottom: 60%;
+        content:'';
+        width: 80%;
+        height: 10px;
+        background: whitesmoke;
+        border-radius: 10px;
+        }
+        &::after{
+        position: absolute;
+        top: 60%;
+        content:'';
+        width: 80%;
+        height: 10px;
+        background: whitesmoke;
+        border-radius: 10px;
+        }
+        @include bigscreen{
+            display: none;
+        }
+    }
+}
+
+.pageheader {
+    width: 100%;
+    text-align: center;
+    margin-top: 80px;
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 700;
+}
